@@ -1,0 +1,89 @@
+.item-details-bg-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  align-items: center;
+}
+
+.course-heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.failure-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.failure-image {
+  height: 400px;
+}
+
+.failure-heading {
+  color: #475569;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.failure-description {
+  color: #475569;
+  font-size: 28px;
+}
+
+.retry-button {
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #4656a1;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+.tech-item-container {
+  display: flex;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+
+.tech-item-container {
+  height: 500px;
+  width: 60vw;
+  display: flex;
+  margin: 20px;
+}
+
+.tech-item-image {
+  height: 500px;
+  width: 500px;
+  margin-right: 10px;
+}
+
+.item-name {
+  font-size: 35px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.item-description {
+  font-size: 20px;
+  color: #475569;
+  flex-wrap: wrap;
+  max-width: 500px;
+  line-height: 38px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}

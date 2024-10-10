@@ -1,0 +1,15 @@
+.Header-container {
+  height: 80px;
+  background-color: #f1f5f9;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.website-image {
+  height: 60px;
+  width: 150px;
+}
+
+.link {
+  text-decoration: none;
+}
