@@ -4,11 +4,10 @@ import CourseItemDetails from './components/CourseItemDetails'
 import NotFound from './components/NotFound'
 import './App.css'
 
-// Replace your code here
 const App = () => (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route eaxct path="/courses/:id" component={CourseItemDetails} />
+    <Route exact path="/courses/:id" component={CourseItemDetails} />
     <Route component={NotFound} />
   </Switch>
 )
