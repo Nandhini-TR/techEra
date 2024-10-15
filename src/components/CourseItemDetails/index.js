@@ -70,14 +70,14 @@ class CourseItemDetails extends Component {
       <button
         className="retry-button"
         type="button"
-        onClick={this.getCourseItemDetails()}
+        onClick={this.getCourseItemDetails}
       >
         Retry
       </button>
     </div>
   )
 
-  renderSucess = () => {
+  renderSuccess = () => {
     const {techItemDetail} = this.state
     const {name, description, imageUrl} = techItemDetail
     return (
@@ -97,10 +97,10 @@ class CourseItemDetails extends Component {
     const {status} = this.state
 
     switch (status) {
-      case apiStatusConstants.success:
-        return this.renderSucess()
-      case apiStatusConstants.loading:
+      case apiStatusConstants.inProgress:
         return this.renderLoading()
+      case apiStatusConstants.success:
+        return this.renderSuccess()
       case apiStatusConstants.failure:
         return this.renderFailure()
       default:

@@ -44,37 +44,37 @@ class Home extends Component {
   }
 
   renderLoading = () => (
-    <div data-testid='loader'>
-      <Loader type='TailSpin' color='00BFFF' height={50} width={50} />
+    <div data-testid="loader">
+      <Loader type="TailSpin" color="00BFFF" height={50} width={50} />
     </div>
   )
 
   renderFailure = () => (
-    <div className='failure-container'>
+    <div className="failure-container">
       <img
-        src='https://assets.ccbp.in/frontend/react-js/tech-era/failure-img.png'
-        alt='failure view'
-        className='failure-image'
+        src="https://assets.ccbp.in/frontend/react-js/tech-era/failure-img.png"
+        alt="failure view"
+        className="failure-image"
       />
-      <h1 className='failure-heading'>Oops! Something Went Wrong</h1>
-      <p className='failure-description'>
+      <h1 className="failure-heading">Oops! Something Went Wrong</h1>
+      <p className="failure-description">
         We cannot seem to find the page you are looking for.
       </p>
-      <button className='retry-button' type='button' onClick={this.getCourses}>
-        Retrys
+      <button className="retry-button" type="button" onClick={this.getCourses}>
+        Retry
       </button>
     </div>
   )
 
-  renderSucess = () => {
+  renderSuccess = () => {
     const {techList} = this.state
     return (
-      <ul className='tech-ul-list'>
+      <ul className="tech-ul-list">
         {techList.map(each => (
-          <Link to={`/courses/${each.id}`} className='link'>
-            <li className='tech-list' key={each.id}>
-              <img src={each.logoUrl} alt={each.name} className='logo' />
-              <p className='course-name'>{each.name}</p>
+          <Link to={`/courses/${each.id}`} className="link" key={each.id}>
+            <li className="tech-list" key={each.id}>
+              <img src={each.logoUrl} alt={each.name} className="logo" />
+              <p className="course-name">{each.name}</p>
             </li>
           </Link>
         ))}
@@ -86,10 +86,10 @@ class Home extends Component {
     const {status} = this.state
 
     switch (status) {
-      case apiStatusConstants.success:
-        return this.renderSucess()
-      case apiStatusConstants.loading:
+      case apiStatusConstants.inProgress:
         return this.renderLoading()
+      case apiStatusConstants.success:
+        return this.renderSuccess()
       case apiStatusConstants.failure:
         return this.renderFailure()
       default:
@@ -101,8 +101,8 @@ class Home extends Component {
     return (
       <>
         <Header />
-        <div className='home-container'>
-          <h1 className='course-heading'>Courses</h1>
+        <div className="home-container">
+          <h1 className="course-heading">Courses</h1>
           {this.rendertechEra()}
         </div>
       </>
